@@ -340,17 +340,28 @@ p {
     max-width: 90%;
 }
 
-.gallery-grid img {
+.gallery-grid img,
+.gallery-grid video {
     width: 100%;
     border-radius: 10px;
     margin-bottom: 15px;
     display: block;
+    break-inside: avoid;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Image hover effect */
+.gallery-grid img:hover {
+    transform: scale(1.05);
     transition: transform 0.3s ease;
 }
 
-.gallery-grid img:hover {
-    transform: scale(1.05);
+/* Optional: subtle zoom on video hover (if you want) */
+.gallery-grid video:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
 }
+
 
 /* Responsive Design */
 @media screen and (max-width: 1024px) {
